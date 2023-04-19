@@ -70,7 +70,8 @@
           "options": {
             "browserTarget": "angular.io-example:build"
           }
-        }, 
+        },
+        "test": {},
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
