@@ -39,7 +39,6 @@ export class CartComponent implements OnInit {
       'Your order has been submitted',
       this.cartService.finalOrderDetails
     );
-    alert('Your order has been submitted');
     this.checkOutForm.reset();
     this.router.navigate(['/order-confirmation']);
   }
