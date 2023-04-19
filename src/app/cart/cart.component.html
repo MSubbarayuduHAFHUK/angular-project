@@ -1,0 +1,26 @@
+<a class="button fancy-button backButton" [routerLink]="['/']"
+  ><i class="material-icons">keyboard_backspace</i>Back to Home Page</a
+>
+
+<h3>Cart</h3>
+
+<p>
+  <a [routerLink]="['/shipping']">Shipping Prices</a>
+</p>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div>
+
+<form [formGroup]="checkOutForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name"> Name </label>
+    <input type="text" id="name" formControlName="name" required />
+  </div>
+  <div>
+    <label for="address"> Address </label>
+    <input type="text" id="address" formControlName="address" required />
+  </div>
+  <button type="submit" class="button">Purchase</button>
+</form>

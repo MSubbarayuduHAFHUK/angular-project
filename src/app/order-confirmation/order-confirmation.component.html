@@ -1,0 +1,9 @@
+<h3>Thank you for the Order</h3>
+
+<div>
+  <p>Name: {{ orderDetails.name }}</p>
+  <p>Address: {{ orderDetails.address }}</p>
+  <div *ngFor="let product of orderDetails.products">
+    <p>{{ product.name }}, {{ product.price | currency }}</p>
+  </div>
+</div>

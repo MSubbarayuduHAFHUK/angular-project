@@ -1,5 +1,5 @@
-<a class="button fancy-button" [routerLink]="['/']"
-  ><i class="material-icons">keyboard_backspace</i>Back</a
+<a class="button fancy-button backButton" [routerLink]="['/']"
+  ><i class="material-icons">keyboard_backspace</i>Back to Home Page</a
 >
 <h2>Product Details</h2>
 
@@ -7,4 +7,5 @@
   <h3>{{ product.name }}</h3>
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
 </div>

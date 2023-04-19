@@ -1,0 +1,10 @@
+<a class="button fancy-button backButton" [routerLink]="['/cart']"
+  ><i class="material-icons">keyboard_backspace</i>Back to Cart</a
+>
+
+<h3>Shipping Prices</h3>
+
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
